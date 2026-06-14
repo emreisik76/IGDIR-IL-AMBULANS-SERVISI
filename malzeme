@@ -1,0 +1,30 @@
+# Ambulans listesi programı
+
+ambulans_listesi = []  # boş liste
+
+def ambulans_ekle():
+    plaka = input("Ambulans plakası girin: ")
+    ambulans_listesi.append(plaka)
+    print(f"{plaka} plakalı ambulans listeye eklendi.")
+
+def listeyi_goster():
+    print("Mevcut ambulans listesi:")
+    for i, ambulans in enumerate(ambulans_listesi, start=1):
+        print(f"{i}. {ambulans}")
+
+# Kullanım örneği
+while True:
+    print("\n1- Ambulans ekle")
+    print("2- Listeyi göster")
+    print("3- Çıkış")
+    secim = input("Seçiminiz: ")
+
+    if secim == "1":
+        ambulans_ekle()
+    elif secim == "2":
+        listeyi_goster()
+    elif secim == "3":
+        print("Programdan çıkılıyor...")
+        break
+    else:
+        print("Geçersiz seçim!")
